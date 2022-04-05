@@ -1,4 +1,4 @@
-let dineroPedro = prompt("cunato dinero tenes pedro?");
+/*let dineroPedro = prompt("cunato dinero tenes pedro?");
 parseInt(dineroPedro)
 
 if(dineroPedro >= 10 && dineroPedro <20){
@@ -15,4 +15,11 @@ else if(dineroPedro >= 30){
 }
 else{
     document.write("no te alcanza para nada capo");
+}
+*/
+let numero = 0
+
+while(numero < 10){
+    numero ++;
+    document.write(numero)
 }
