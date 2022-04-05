@@ -14,5 +14,5 @@ else if(dineroPedro >= 30){
     document.write(" y te sobran " + (dineroPedro - 30 ));
 }
 else{
-    document.write("no te alcanza para nada crack");
+    document.write("no te alcanza para nada capo");
 }
