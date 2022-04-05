@@ -1,3 +1,4 @@
+//______________________________________________IF, ELSE IF, ELSE_______________________________________________
 /*let dineroPedro = prompt("cunato dinero tenes pedro?");
 parseInt(dineroPedro)
 
@@ -17,9 +18,59 @@ else{
     document.write("no te alcanza para nada capo");
 }
 */
-let numero = 0
+//_____________________________________________________ARRAY____________________________________________________
+/*
+
+let caja = ["perro", "gato", "pajaro","conejo"];
+document.write(caja [3]);
+
+
+let caja = {
+    animal: "gato",
+    prenda: "remera",
+    talle: 10,
+    deporte : "futbol",
+}
+
+let animal = caja["animal"];
+let prenda = caja["prenda"];
+let talle = caja["talle"];
+let deporte = caja["deporte"]
+
+let frase = `mi ${animal} tiene una ${prenda} <br> del talle ${talle} y juega al ${deporte}`;
+
+document.write(frase)
+*/
+//______________________________________________________WHILE_____________________________________________________
+/*
+let numero = 0;
 
 while(numero < 10){
     numero ++;
-    document.write(numero)
+
+    document.write(numero + "<br>")
 }
+*/
+//___________________________________________________DO WHILE____________________________________________________
+/*
+let numero = 0
+
+do{
+    document.write(numero + "<br>");
+    numero ++;
+}
+
+while (numero < 10);
+*/
+//_____________________________________________________BREAK____________________________________________________
+let numero = 0
+
+while(numero < 1000){
+    numero ++;
+    document.write(numero)
+    if(numero == 17){
+        break;
+    }
+}
+
+document.write(" fin")
