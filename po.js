@@ -1,5 +1,6 @@
 //______________________________________________IF, ELSE IF, ELSE_______________________________________________
-/*let dineroPedro = prompt("cunato dinero tenes pedro?");
+/*
+let dineroPedro = prompt("cunato dinero tenes pedro?");
 parseInt(dineroPedro)                              //parseInt es para que me devuelva numeros
 
 if(dineroPedro >= 10 && dineroPedro <20){
@@ -218,3 +219,37 @@ saludar("marcos")
 saludar("marcelo")
 saludar("pablo")
 */
+//________________________________________PROBLEMA DE FUNCTION FLECHA____________________________________________
+// UNA PERSONA HACE UNA FIESTA Y SOLO DEJA PASAR A LOS MAYORES DE 18 AÑOS,Y EL PRIMERO QUE ENTRA DESPUES DE LAS 2 AM 
+// PUEDE PASAR GRATIS, LA FIESTA TERMINA A LAS 7AM. 
+// TENGO QUE APRENDER EL TEMA HORAS (EN ESTE EJERCICIO)
+/*
+let gratis = false;
+
+const valiarCliente = (hora)=>{
+    let edad = prompt("¿Cuantos años tenes?")
+    if(edad >= 18){
+        if(hora >= 2 && gratis == false){
+            alert(` podes pasar gratis por ser la primer persona que viene despues de las 2am`);
+            gratis = true;
+        }else if(hora >= 7){
+            alert(`son las ${hora}:00, ya cerramos`)
+            
+        }else{
+                alert(`son las ${hora}:00, podes pasar pero tenes que pagar`)
+        }
+    }else{
+        alert("sos menor no podes pasar")
+    }
+}
+
+
+valiarCliente(00);
+valiarCliente(1);
+valiarCliente(2);
+valiarCliente(3);
+valiarCliente(4);
+valiarCliente(8);
+valiarCliente(9);
+*/
+//_____________________________________2DO PROBLEMA FUNCTION FLECHA______________________________________________
