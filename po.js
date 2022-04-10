@@ -253,3 +253,34 @@ valiarCliente(8);
 valiarCliente(9);
 */
 //_____________________________________2DO PROBLEMA FUNCTION FLECHA______________________________________________
+//ASISTENCIAS
+let cantidad = prompt("cunatos alumnos son?"); //PREGUNTA LA CANTIDAD DE ALUMNOS
+let cantidadAlumnos = []; //ARRAY, TOMA LA CANTIDAD DE ALUMNOS
+
+for(i = 0; i < cantidad; i++){
+    cantidadAlumnos[i] = [prompt("nombre del alumno " + (i+1)),0]; //PREGUNTA LOS NOMBRES DE LOS ALUMNOS
+}
+const tomarAsistencia = (nombre,p)=>{
+    let precencia = prompt(nombre);
+    if(precencia == "p" || precencia == "P"){ //PARA PONER LOS PRESENTES O LOS AUSENTES
+        cantidadAlumnos[p][1]++;
+    }
+
+}
+
+for (i = 0; i < 10; i++) {
+    for ( alumno in cantidadAlumnos){
+        tomarAsistencia(cantidadAlumnos[alumno][0],alumno); //ME PREGUNTA LOS PRESENTES CADA DIA
+    }
+}
+for (alumno in cantidadAlumnos){
+    let resultado =`${cantidadAlumnos[alumno][0]}:<br>
+    ________Presentes: <b> ${cantidadAlumnos[alumno][1]}</b> <br>
+    ________Ausencias: <b> ${10 - cantidadAlumnos[alumno][1]} </b>`;
+    if(10 - cantidadAlumnos[alumno][1] >2){
+        resultado+= "<b style='color:red'>REPROBADO POR INASISTENCIAS</b><br><br>"; //ME MUESTRA EN PANTALLA LA CANTIDAD DE PRESENTES Y AUSENTES Y QUIEN DESAPROBO POR INASISTENCIAS
+    }else{
+        resultado+="<br><br>"
+    }
+    document.write(resultado);
+}
