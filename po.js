@@ -227,19 +227,19 @@ saludar("pablo")
 let gratis = false;
 
 const valiarCliente = (hora)=>{
-    let edad = prompt("¿Cuantos años tenes?")
+    let edad = prompt("¿Cuantos años tenés?")
     if(edad >= 18){
         if(hora >= 2 && gratis == false){
-            alert(` podes pasar gratis por ser la primer persona que viene despues de las 2am`);
+            alert(` Podés pasar gratis por ser la primer persona que viene despues de las 2 am`);
             gratis = true;
         }else if(hora >= 7){
-            alert(`son las ${hora}:00, ya cerramos`)
+            alert(`Son las ${hora}:00, ya cerramos`)
             
         }else{
-                alert(`son las ${hora}:00, podes pasar pero tenes que pagar`)
+                alert(`Son las ${hora}:00, podes pasar pero tenes que pagar`)
         }
     }else{
-        alert("sos menor no podes pasar")
+        alert("Sos menor no podes pasar")
     }
 }
 
@@ -254,6 +254,7 @@ valiarCliente(9);
 */
 //_____________________________________2DO PROBLEMA FUNCTION FLECHA______________________________________________
 //ASISTENCIAS
+/*
 let cantidad = prompt("cunatos alumnos son?"); //PREGUNTA LA CANTIDAD DE ALUMNOS
 let cantidadAlumnos = []; //ARRAY, TOMA LA CANTIDAD DE ALUMNOS
 
@@ -284,3 +285,114 @@ for (alumno in cantidadAlumnos){
     }
     document.write(resultado);
 }
+*/
+//______________________________________________3ER PRBLEMA______________________________________________________
+//CALCULADORA DE SUMA, RESTA, MULTIPLICACION Y DIVISION.
+/*
+const sumar = (num1,num2)=>{
+    return parseInt(num1) + parseInt(num2);
+}
+const restar = (num1,num2)=>{
+    return parseInt(num1) - parseInt(num2);
+}
+const multiplicar = (num1,num2)=>{
+    return parseInt(num1) * parseInt(num2);
+}
+const dividir = (num1,num2)=>{
+    return parseInt(num1) / parseInt(num2);
+}
+alert("¿Que operación desea realizar?");
+let operacion = prompt("1:Sumar  2:Restar  3:Multiplicar  4:Dividir");
+if(operacion == 1){
+    let numero1 = prompt("Primer numero que desea sumar");
+    let numero2 = prompt("Segundo numero que desea sumar");
+    let resultado = sumar(numero1,numero2);
+    alert(`El resultado es ${resultado}`);
+}
+else if(operacion == 2){
+    let numero1 = prompt("Primer numero que desea restar");
+    let numero2 = prompt("Segundo numero que desea restar");
+    let resultado = restar(numero1,numero2);
+    alert(`El resultado es ${resultado}`);
+}
+else if(operacion == 3){
+    let numero1 = prompt("Primer numero que desea multiplicar");
+    let numero2 = prompt("Segundo numero que desea multiplicar");
+    let resultado = multiplicar(numero1,numero2);
+    alert(`El resultado es ${resultado}`);
+}
+else if(operacion == 4){
+    let numero1 = prompt("Primer numero que desea dividir");
+    let numero2 = prompt("Segundo numero que desea dividir");
+    let resultado = dividir(numero1,numero2);
+    alert(`El resultado es ${resultado}`);
+}
+else{
+    alert("No se puede realizar la operación")
+}
+*/
+//______________________________________PROGRAMACION ORIENTADA A OBJETOS__________________________________________
+/*
+class animal {
+    constructor(especie,edad,color){
+        this.especie = especie;
+        this.edad = edad;
+        this.color = color;
+        this.info = `soy un ${this.especie}, tengo ${this.edad} años y soy de color ${this.color}, gracias.`
+    }
+
+    verInfo(){
+        document.write(this.info + "<br>")
+    }
+}
+
+let perro = new animal("perro",5,"marron");
+let gato = new animal("gato",3,"negro");
+let pajaro = new animal("pajaro",2,"verde");
+let rinoceronte = new animal("rinoceronte",6,"gris");
+
+perro.verInfo();
+gato.verInfo();
+pajaro.verInfo();
+rinoceronte.verInfo();
+
+
+
+//console.log(perro)
+//console.log(gato)
+//console.log(pajaro)
+//console.log(rinoceronte)
+
+
+//document.write(perro.info + "<br>")
+//document.write(gato.info + "<br>")
+//document.write(pajaro.info + "<br>")
+//document.write(rinoceronte.info + "<br>")
+
+
+
+    
+
+
+
+const multiplicacion = (function(numero1, numero2){
+    return numero1 * numero2
+})(3,8)
+
+console.log(multiplicacion)
+
+*/
+
+function crearMultiplicador(num1){
+    return function (num2){
+        return num1 * num2;
+    }
+}
+const duplicar = crearMultiplicador(2)
+const triplicar = crearMultiplicador(3)
+
+console.log(duplicar(8))
+console.log(duplicar(7))
+
+console.log(triplicar(8))
+console.log(triplicar(7))
