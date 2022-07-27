@@ -1,7 +1,5 @@
 const fs = require('fs');
 
-
-
 class Contenedor {
     constructor(path) {
         this.name = path
@@ -17,10 +15,8 @@ class Contenedor {
                 await fs.promises.writeFile(this.name, JSON.stringify(products))
                 return newLastItem;
             } catch (error) {
-                throw new Error('Error de guardado')
+                throw new Error('Error al guardar')
             }
-
-
 
         } else {
             objet.id = 1;
@@ -31,7 +27,7 @@ class Contenedor {
                 return objet.id
 
             } catch (error) {
-                throw new Error('Error de guardado')
+                throw new Error('Error al guardar')
             }
         }
     }
@@ -42,11 +38,9 @@ class Contenedor {
             let foundById = products.find(product => product.id == id);
             return foundById;
         } else {
-            console.log('El archivo buscado no esxiste');
+            console.log('No existe el arvhico que esta buscando');
         }
     }
-
-
 
     async getAll() {
         if (fileExists(this.name)) {
@@ -57,11 +51,9 @@ class Contenedor {
                 return [];
             }
         } else {
-            console.log('El archivo buscado no existe');
+            console.log('No existe el arvhico que esta buscando');
         }
     }
-
-
 
     async deleteById(id) {
         if (fileExists(this.name)) {
@@ -70,7 +62,7 @@ class Contenedor {
             products.splice(productToDelete, 1);
             await fs.promises.writeFile(this.name,  JSON.stringify(products));
         } else {
-            console.log('El archivo buscado no existe');
+            console.log('No existe el arvhico que esta buscando');
         }
     }
 
@@ -78,14 +70,13 @@ class Contenedor {
         if (fileExists(this.name)) {
             await fs.promises.unlink(this.name);
         } else {
-            console.log('El archivo buscado no existe');
+            console.log('No existe el arvhico que esta buscando');
         }
     }
 }
 
 
-
-
+// Helpers
 const fileExists = (path) => {
     try {
         return fs.statSync(path).isFile();
@@ -93,6 +84,5 @@ const fileExists = (path) => {
         return false;
     }
 }
-
 
 module.exports = Contenedor;
