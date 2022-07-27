@@ -9,17 +9,15 @@ class Usuario {
     getFullName(){
         return `Hola, yo soy ${this.nombre} ${this.apellido}`;
     }
-    addMascotas(){
-        this.mascotas.push('tortuga')
-        return this.mascotas;
-    }
+    addMascotas(tortuga){
+        return this.mascotas.push(tortuga);
+    };
     countMascotas(){
         return this.mascotas.length;
     }
-    addBook(){
-        this.libros.push({nombre:'Harry Potter y el caliz de fuego', autor:'J.K.Rowling'})
-        return this.libros;
-    }
+    addBook(nombre, autor){
+        return this.libros.push({nombre: 'Harry Potter y el caliz de fuego', autor: 'J.K.Rowling'});
+    };
     getBookNames(){
         return this.libros.map(nombreLibros =>{
             return nombreLibros.nombre
@@ -34,3 +32,4 @@ console.log(usuario1.addMascotas());
 console.log(usuario1.countMascotas());
 console.log(usuario1.addBook());
 console.log(usuario1.getBookNames());
+
