@@ -11,6 +11,8 @@ class Contenedor{
     }
 
     async getById(id){
+        const products = await this.getAll();
+        const productById = products.find()
 
     }
 
