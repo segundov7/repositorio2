@@ -1,8 +1,6 @@
 const Container = require('./clases');
 
 
-
-
 const main = async () => {
     const products = new Container('productos.txt');
 
