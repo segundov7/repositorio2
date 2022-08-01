@@ -38,7 +38,7 @@ class Contenedor {
             let foundById = products.find(product => product.id == id);
             return foundById;
         } else {
-            console.log('No existe el arvhico que esta buscando');
+            console.log('No existe el archivo que esta buscando');
         }
     }
 
@@ -51,7 +51,7 @@ class Contenedor {
                 return [];
             }
         } else {
-            console.log('No existe el arvhico que esta buscando');
+            console.log('No existe el archivo que esta buscando');
         }
     }
 
@@ -62,7 +62,7 @@ class Contenedor {
             products.splice(productToDelete, 1);
             await fs.promises.writeFile(this.name,  JSON.stringify(products));
         } else {
-            console.log('No existe el arvhico que esta buscando');
+            console.log('No existe el archivo que esta buscando');
         }
     }
 
@@ -70,7 +70,7 @@ class Contenedor {
         if (fileExists(this.name)) {
             await fs.promises.unlink(this.name);
         } else {
-            console.log('No existe el arvhico que esta buscando');
+            console.log('No existe el archivo que esta buscando');
         }
     }
 }
