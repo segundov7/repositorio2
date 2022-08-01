@@ -76,7 +76,7 @@ class Contenedor {
 }
 
 
-// Helpers
+
 const fileExists = (path) => {
     try {
         return fs.statSync(path).isFile();
