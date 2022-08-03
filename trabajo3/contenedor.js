@@ -41,7 +41,7 @@ class Contenedor {
                 console.log(error);
             }
         } else {
-            console.log('No existe el archico que esta buscando');
+            console.log('No existe el archivo que esta buscando');
         }
     }
     async getAll() {
@@ -56,7 +56,7 @@ class Contenedor {
                 console.log(error);
             }
         } else {
-            console.log('No existe el archico que esta buscando');
+            console.log('No existe el archivo que esta buscando');
         }
     };
 
@@ -74,7 +74,7 @@ class Contenedor {
                 })
                 .catch(err => (console.log(err)))
         } else {
-            console.log('No existe el archico que esta buscando');
+            console.log('No existe el archivo que esta buscando');
         }
     };
 
@@ -84,7 +84,7 @@ class Contenedor {
                 .then(console.log('Datos borrados'))
                 .catch(err => (console.log(err)))
         } else {
-            console.log('No existe el archico que esta buscando');
+            console.log('No existe el archivo que esta buscando');
         }
     }
 
